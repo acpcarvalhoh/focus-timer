@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --bg-cards: #E1E1E6;
+    --color-timer:  #323238;
+
+    /*  botões */
+    --fill-light-mode: #323238;
+    --fill-dark-mode: #C4C4CC;
+
+    /*  cards */
+    --fil-light-mode: #02799D;
+    --fil-dark-mode: #C4C4CC;
+
+    --fill-card-active: #FFFFFF;
+}
+
+body{
+    font-size: 1.6rem;
+    min-height: 100vh;
+    display: grid;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bg-cards{
+    color: #02799D;
+    color: #323238;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header{
+    align-self: start;
+    justify-self: end;
+    padding: 6rem 6rem 0 0;
+}
+
+.hidden{
+    display: none;
+}
+
+main{
+    align-self: flex-start;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 19rem;
+    flex-wrap: wrap;
+}
+
+.flex-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4.8rem;
+}
+
+#timer{
+    display: flex;
+    font-size: clamp(4rem, 4rem + 10vw, 12.6rem);
+    color: var(--color-timer);
+}
+
+#controls{
+    display: flex;
+    gap: 4rem;
+}
+
+#sounds{
+    display: grid;
+    gap: 3.2rem;
+    grid-template-areas: "A  B"
+    "C D";
+}
+
+#sounds button{
+    width: 13.8rem;
+    background: var(--bg-cards);
+    border-radius: 2.4rem;
+    padding: 2.4rem;
+}
+
+#sounds button input{
+    width: 9rem;
+    margin-top: 3.2rem;
+    cursor: pointer;
+}
+
+
+
+
