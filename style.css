@@ -16,11 +16,16 @@
     --fill-light-mode: #323238;
     --fill-dark-mode: #C4C4CC;
 
-    /*  cards */
-    --fil-light-mode: #02799D;
-    --fil-dark-mode: #C4C4CC;
 
-    --fill-card-active: #FFFFFF;
+    /*  Dark mode */
+    --bg-body-dark: #000000;
+    --color-timer-dark: #ffffff;
+    --controls-fill-dark: #C4C4CC;
+    --cards-fill-dark: #C4C4CC;
+    --bg-cards-dark: #29292E;
+
+    --bg-active-cards: #0A3442;
+    --cards-fill-active: #ffffff;
 }
 
 body{
@@ -28,6 +33,7 @@ body{
     min-height: 100vh;
     display: grid;
     font-family: 'Roboto', sans-serif;
+    
 }
 
 .bg-cards{
@@ -80,6 +86,7 @@ main{
     gap: 4rem;
 }
 
+
 #sounds{
     display: grid;
     gap: 3.2rem;
@@ -88,14 +95,19 @@ main{
 }
 
 #sounds button{
-    width: 13.8rem;
+    width: clamp(5rem, 6rem + 10vw, 13.8rem);
     background: var(--bg-cards);
     border-radius: 2.4rem;
     padding: 2.4rem;
 }
 
+#sounds button svg{
+    width: clamp(1.5rem, 2rem + 10vw, 4.5rem);
+    height: clamp(1.5rem, 2rem + 10vw, 5.6rem);
+}
+
 #sounds button input{
-    width: 9rem;
+    width: clamp(1.5rem, 2.5rem + 10vw, 9rem);
     margin-top: 3.2rem;
     cursor: pointer;
 }
