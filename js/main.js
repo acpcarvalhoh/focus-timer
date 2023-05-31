@@ -1,6 +1,5 @@
-import { darkModeDisplay } from "./darkmode.js"
-
-
+import { ModeDisplay } from "./displaymode.js"
+import { Sounds } from "./sounds.js"
 
 const timerDisplay  = document.querySelector('#timer')
 const controlsSvgFill = document.querySelectorAll('#controls svg path')
@@ -16,9 +15,25 @@ const buttonLightMode = document.querySelector('.light-mode')
 const buttonDarkMode = document.querySelector('.dark-mode')
 const boby = document.querySelector('body')
 
+const CardSoundFlorest = document.querySelector('.florest')
 
+const volumeRange = document.querySelector('#vol-florest')
 
-const darkMode = darkModeDisplay({
+const sounds = Sounds()
+volumeRange.addEventListener('input', function(event) {
+    const volume = parseFloat(volumeRange.value);
+    sounds.soudOfFlorest(volume);
+    event.stopPropagation()
+    
+});
+  
+
+CardSoundFlorest.addEventListener('click', function(){
+    sounds.soudOfFlorest(volumeRange)
+    console.log('testando')
+})
+
+const modeDisplay = ModeDisplay({
     boby,
     timerDisplay,
     controlsSvgFill,
@@ -28,12 +43,12 @@ const darkMode = darkModeDisplay({
 
 buttonDarkMode.addEventListener('click', function(){
     darkAndLightMode()
-    return
+    modeDisplay.lightModeContent()
 })
 
 buttonLightMode.addEventListener('click', function(){
     darkAndLightMode()
-    darkMode.darkModeContent()
+    modeDisplay.darkModeContent()
 })
 
 

@@ -9,13 +9,16 @@
 :root{
     font-size: 62.5%;
 
-    --bg-cards: #E1E1E6;
-    --color-timer:  #323238;
+    /*  Light Mode */
+    --bg-body-light: #ffffff;
+    --color-timer-light: #323238;
+    --controls-fill-light: #323238;
+    --cards-fill-light: #323238;
+    --bg-cards-light: #E1E1E6;
 
-    /*  botões */
-    --fill-light-mode: #323238;
-    --fill-dark-mode: #C4C4CC;
-
+    --bgCards-active-light: #02799D;
+    --activeCards-fill-light: #ffffff;
+    
 
     /*  Dark mode */
     --bg-body-dark: #000000;
@@ -24,8 +27,8 @@
     --cards-fill-dark: #C4C4CC;
     --bg-cards-dark: #29292E;
 
-    --bg-active-cards: #0A3442;
-    --cards-fill-active: #ffffff;
+    --bgCards-active-dark: #0A3442;
+    --activeCards-fill-dark: #ffffff;
 }
 
 body{
@@ -34,11 +37,6 @@ body{
     display: grid;
     font-family: 'Roboto', sans-serif;
     
-}
-
-.bg-cards{
-    color: #02799D;
-    color: #323238;
 }
 
 button{
@@ -78,7 +76,7 @@ main{
 #timer{
     display: flex;
     font-size: clamp(4rem, 4rem + 10vw, 12.6rem);
-    color: var(--color-timer);
+    color: var(--color-timer-light);
 }
 
 #controls{
@@ -96,9 +94,10 @@ main{
 
 #sounds button{
     width: clamp(5rem, 6rem + 10vw, 13.8rem);
-    background: var(--bg-cards);
+    background: var(--bg-cards-light);
     border-radius: 2.4rem;
     padding: 2.4rem;
+    
 }
 
 #sounds button svg{
@@ -111,6 +110,36 @@ main{
     margin-top: 3.2rem;
     cursor: pointer;
 }
+
+#sounds button input{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: #323238;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  #sounds button input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #323238;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  #sounds button input::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #323238;
+    cursor: pointer;
+  }
+  
 
 
 
