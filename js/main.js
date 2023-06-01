@@ -5,6 +5,8 @@ const timerDisplay  = document.querySelector('#timer')
 const controlsSvgFill = document.querySelectorAll('#controls svg path')
 const cardsSvgFill = document.querySelectorAll('#sounds svg path')
 const cards = document.querySelectorAll('#sounds button')
+const inputRange = document.querySelectorAll('input[type="range"]')
+const teste = document.querySelector('input[type="range"]')
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
 const buttonPlay = document.querySelector('.play')
@@ -31,6 +33,7 @@ volumeRange.addEventListener('input', function(event) {
 CardSoundFlorest.addEventListener('click', function(){
     sounds.soudOfFlorest(volumeRange)
     console.log('testando')
+    modeDisplay.activeCards()
 })
 
 const modeDisplay = ModeDisplay({
@@ -39,6 +42,7 @@ const modeDisplay = ModeDisplay({
     controlsSvgFill,
     cardsSvgFill,
     cards,
+    inputRange
 })
 
 buttonDarkMode.addEventListener('click', function(){
@@ -55,6 +59,7 @@ buttonLightMode.addEventListener('click', function(){
 function darkAndLightMode(){
     buttonDarkMode.classList.toggle('hidden')
     buttonLightMode.classList.toggle('hidden')
+    
 }
 
     

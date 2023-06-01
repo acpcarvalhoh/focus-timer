@@ -15,6 +15,7 @@
     --controls-fill-light: #323238;
     --cards-fill-light: #323238;
     --bg-cards-light: #E1E1E6;
+    --range-color-light: #323238;
 
     --bgCards-active-light: #02799D;
     --activeCards-fill-light: #ffffff;
@@ -26,6 +27,7 @@
     --controls-fill-dark: #C4C4CC;
     --cards-fill-dark: #C4C4CC;
     --bg-cards-dark: #29292E;
+    --range-color-dark: #FFFFFF;
 
     --bgCards-active-dark: #0A3442;
     --activeCards-fill-dark: #ffffff;
@@ -121,24 +123,60 @@ main{
     opacity: 1;
     -webkit-transition: .2s;
     transition: opacity .2s;
-  }
+}
   
-  #sounds button input::-webkit-slider-thumb {
+#sounds button input::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 16px;
     height: 16px;
-    background: #323238;
+    background: var(--range-color-light);
     cursor: pointer;
     border-radius: 50%;
-  }
+}
   
-  #sounds button input::-moz-range-thumb {
+#sounds button input::-moz-range-thumb {
     width: 25px;
     height: 25px;
-    background: #323238;
+    background: var(--range-color-light);
     cursor: pointer;
-  }
+}
+
+
+#sounds button input.dark{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: var(--range-color-dark);
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+
+  
+#sounds button input.dark::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--range-color-dark);
+    cursor: pointer;
+    border-radius: 50%;
+}
+  
+#sounds button input.dark::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: var(--range-color-dark);
+    cursor: pointer;
+}
+
+  
+
+
   
 
 

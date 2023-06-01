@@ -4,6 +4,7 @@ export function ModeDisplay({
     controlsSvgFill,
     cardsSvgFill,
     cards,
+    inputRange
 }){
 
     function darkModeContent(){
@@ -21,6 +22,11 @@ export function ModeDisplay({
         cardsSvgFill.forEach(svg => {
             svg.style.fill = 'var(--cards-fill-dark)';
         });
+
+        inputRange.forEach(slider => {
+            slider.classList.add('dark');
+        });
+
     }
 
     function lightModeContent(){
@@ -37,6 +43,11 @@ export function ModeDisplay({
 
         cardsSvgFill.forEach(svg => {
             svg.style.fill = 'var(--cards-fill-light)';
+        });
+
+
+        inputRange.forEach(slider => {
+            slider.classList.remove('dark');
         });
     }
     
