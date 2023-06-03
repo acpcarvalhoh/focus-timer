@@ -94,12 +94,43 @@ main{
     "C D";
 }
 
-#sounds button{
+/*cards ativados  modo escuro*/
+#sounds .card.activedDark{
+    background: var(--bgCards-active-dark);
+}
+
+#sounds .card button svg path.activedDark{
+    fill: var(--activeCards-fill-dark);
+}
+
+/*cards ativados  modo claro*/
+#sounds .card.activedLight{
+    background: var(--bgCards-active-light);
+}
+
+#sounds .card button svg path.activedLight{
+    fill: var(--activeCards-fill-dark);
+}
+
+/*Modo escuro*/
+#sounds .card.Dark{
+    background: var(--bg-cards-dark);
+}
+
+#sounds .card button svg path.Dark{
+    fill: var(--cards-fill-dark);
+}
+
+/*Modo claro*/
+#sounds .card{
     width: clamp(5rem, 6rem + 10vw, 13.8rem);
     background: var(--bg-cards-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-radius: 2.4rem;
     padding: 2.4rem;
-    
 }
 
 #sounds button svg{
@@ -107,13 +138,14 @@ main{
     height: clamp(1.5rem, 2rem + 10vw, 5.6rem);
 }
 
-#sounds button input{
+#sounds .card input{
     width: clamp(1.5rem, 2.5rem + 10vw, 9rem);
     margin-top: 3.2rem;
     cursor: pointer;
+    z-index: 10;
 }
 
-#sounds button input{
+#sounds .card input{
     -webkit-appearance: none;
     width: 100%;
     height: 5px;
@@ -125,7 +157,7 @@ main{
     transition: opacity .2s;
 }
   
-#sounds button input::-webkit-slider-thumb {
+#sounds .card input::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 16px;
@@ -135,7 +167,7 @@ main{
     border-radius: 50%;
 }
   
-#sounds button input::-moz-range-thumb {
+#sounds .card input::-moz-range-thumb {
     width: 25px;
     height: 25px;
     background: var(--range-color-light);
@@ -143,7 +175,7 @@ main{
 }
 
 
-#sounds button input.dark{
+#sounds .card input.dark{
     -webkit-appearance: none;
     width: 100%;
     height: 5px;
@@ -157,7 +189,7 @@ main{
 
 
   
-#sounds button input.dark::-webkit-slider-thumb {
+#sounds .card input.dark::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 16px;
@@ -167,7 +199,7 @@ main{
     border-radius: 50%;
 }
   
-#sounds button input.dark::-moz-range-thumb {
+#sounds .card input.dark::-moz-range-thumb {
     width: 25px;
     height: 25px;
     background: var(--range-color-dark);

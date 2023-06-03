@@ -48,8 +48,7 @@ export function Sounds(){
         soudOfFlorest,
         soudOfRain,
         soudOfCoffeshop,
-        soudOfFireplace,
-    
+        soudOfFireplace 
     }
 
 
