@@ -21,16 +21,12 @@ const plusButton = document.querySelector('.plus-button')
 const minusButton = document.querySelector('.minus-button')
 
 const sounds = Sounds()
-
 const audioElements = [
   sounds.soudOfFlorest,
   sounds.soudOfRain,
   sounds.soudOfCoffeshop,
   sounds.soudOfFireplace
 ];
-
-
-buttonSoundCards
 
 const modeDisplay = ModeDisplay({
   boby,
@@ -41,6 +37,7 @@ const modeDisplay = ModeDisplay({
   buttonLightMode,
 });
 
+modeDisplay.activedCards()
 
 buttonDarkMode.addEventListener('click', function () {
   darkAndLightMode();

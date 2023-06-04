@@ -69,12 +69,13 @@ export function ModeDisplay({
 
     }
       
-    activedCards()
+    
     
 
     return {
         darkModeContent,
         lightModeContent,
+        activedCards
     };
 
 }
