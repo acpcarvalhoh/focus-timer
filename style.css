@@ -194,6 +194,7 @@ main{
     flex-direction: column;
     border-radius: 2.4rem;
     padding: 2.4rem;
+    z-index: 1;
 }
 
 #sounds button svg{
@@ -205,7 +206,7 @@ main{
     width: clamp(1.5rem, 2.5rem + 10vw, 9rem);
     margin-top: 3.2rem;
     cursor: pointer;
-    z-index: 10;
+    
 }
 
 #sounds .card input{
