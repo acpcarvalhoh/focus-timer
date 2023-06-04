@@ -19,6 +19,7 @@
 
     --bgCards-active-light: #02799D;
     --activeCards-fill-light: #ffffff;
+    --range-color-actived-light: #ffffff;
     
 
     /*  Dark mode */
@@ -31,6 +32,7 @@
 
     --bgCards-active-dark: #0A3442;
     --activeCards-fill-dark: #ffffff;
+    --range-color-actived-dark: #ffffff;
 }
 
 body{
@@ -103,6 +105,36 @@ main{
     fill: var(--activeCards-fill-dark);
 }
 
+#sounds .card input.activedDark{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: var(--range-color-actived-dark);
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+ 
+#sounds .card input.activedDark::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--range-color-actived-dark);
+    cursor: pointer;
+    border-radius: 50%;
+}
+  
+#sounds .card input.activedDark::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--range-color-actived-dark);
+    cursor: pointer;
+}
+
+
 /*cards ativados  modo claro*/
 #sounds .card.activedLight{
     background: var(--bgCards-active-light);
@@ -111,6 +143,37 @@ main{
 #sounds .card button svg path.activedLight{
     fill: var(--activeCards-fill-dark);
 }
+
+
+#sounds .card input.activedLight{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: var(--range-color-actived-light);
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+ 
+#sounds .card input.activedLight::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--range-color-actived-light);
+    cursor: pointer;
+    border-radius: 50%;
+}
+  
+#sounds .card input.activedLight::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--range-color-actived-light);
+    cursor: pointer;
+}
+
 
 /*Modo escuro*/
 #sounds .card.Dark{
@@ -175,7 +238,7 @@ main{
 }
 
 
-#sounds .card input.dark{
+#sounds .card input.Dark{
     -webkit-appearance: none;
     width: 100%;
     height: 5px;
@@ -189,7 +252,7 @@ main{
 
 
   
-#sounds .card input.dark::-webkit-slider-thumb {
+#sounds .card input.Dark::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 16px;
@@ -199,7 +262,7 @@ main{
     border-radius: 50%;
 }
   
-#sounds .card input.dark::-moz-range-thumb {
+#sounds .card input.Dark::-moz-range-thumb {
     width: 25px;
     height: 25px;
     background: var(--range-color-dark);

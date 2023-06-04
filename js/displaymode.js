@@ -2,72 +2,69 @@ export function ModeDisplay({
     boby,
     timerDisplay,
     controlsSvgFill,
-    cardsSvgFill,
     cards,
-    volumeRange,
     buttonDarkMode,
-    buttonLightMode,
-    
-    
+    buttonLightMode, 
 }){
 
     function darkModeContent(){
         boby.style.background = 'var(--bg-body-dark)'
         timerDisplay.style.color = 'var(--color-timer-dark)'
 
-        cards.forEach(bg_card => {
-            bg_card.classList.add('Dark')
-        });
+        cards.forEach(card => {
+            const svgFill = card.querySelector('svg path')
+            const range = card.querySelector('input[type="range'); 
 
-        cardsSvgFill.forEach(svg => {
-            svg.classList.add('Dark')
-        });
+            card.classList.add('Dark')
+            svgFill.classList.add('Dark')
+            range.classList.add('Dark');
 
-        volumeRange.forEach(slider => {
-            slider.classList.add('dark');
         });
 
         controlsSvgFill.forEach(svg => {
             svg.style.fill = 'var(--controls-fill-dark)'
         });
-
     }
 
     function lightModeContent(){
         boby.style.background = 'var(--bg-body-light)'
         timerDisplay.style.color = 'var(--color-timer-light)'
 
-        cards.forEach(bg_card => {
-            bg_card.classList.remove('Dark')
-        });
+        cards.forEach(card => {
+            const svgFill = card.querySelector('svg path')
+            const range = card.querySelector('input[type="range'); 
 
-        cardsSvgFill.forEach(svg => {
-            svg.classList.remove('Dark');
-        });
-
-        volumeRange.forEach(slider => {
-            slider.classList.remove('dark');
+            card.classList.remove('Dark')
+            svgFill.classList.remove('Dark')
+            range.classList.remove('Dark');
         });
 
         controlsSvgFill.forEach(svg => {
             svg.style.fill = 'var(--controls-fill-light)'
         });
-        
     }
 
     function activedCards() {
+        
         cards.forEach((card) => {
+            const path = card.querySelector('button svg path');
+            const range = card.querySelector('input[type="range');  
+            
             card.addEventListener('click', function () {
-              const currentCard = card;
               if(buttonDarkMode.classList.contains('hidden')){
                 card.classList.toggle('activedLight');
+                path.classList.toggle('activedLight');
+                range.classList.toggle('activedLight');
               }
 
               if (buttonLightMode.classList.contains('hidden')) {
                 card.classList.toggle('activedDark');
-                card.classList.toggle('Dark'); 
-              }
-            });
+                card.classList.toggle('Dark')
+                path.classList.toggle('activedDark');
+                path.classList.toggle('Dark');
+            
+            }});
+
         });
 
     }
