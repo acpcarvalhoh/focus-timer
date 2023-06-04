@@ -101,7 +101,7 @@ main{
     background: var(--bgCards-active-dark);
 }
 
-#sounds .card button svg path.activedDark{
+#sounds button svg path.activedDark{
     fill: var(--activeCards-fill-dark);
 }
 
@@ -140,7 +140,7 @@ main{
     background: var(--bgCards-active-light);
 }
 
-#sounds .card button svg path.activedLight{
+#sounds button svg path.activedLight{
     fill: var(--activeCards-fill-dark);
 }
 
@@ -180,7 +180,7 @@ main{
     background: var(--bg-cards-dark);
 }
 
-#sounds .card button svg path.Dark{
+#sounds button svg path.Dark{
     fill: var(--cards-fill-dark);
 }
 

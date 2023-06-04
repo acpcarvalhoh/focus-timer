@@ -58,7 +58,7 @@ export function ModeDisplay({
     function activedCards() {
         
         cards.forEach((card) => {
-            const path = card.querySelector('button svg path');
+            const path = card.querySelector('svg path');
             const range = card.querySelector('input[type="range');  
             
             card.addEventListener('click', function () {

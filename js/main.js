@@ -9,7 +9,6 @@ const boby = document.querySelector('body')
 const timerDisplay  = document.querySelector('#timer')
 const controlsSvgFill = document.querySelectorAll('#controls svg path')
 
-const buttonSoundCards = document.querySelectorAll('#sounds button')
 const cards = document.querySelectorAll('#sounds .card')
 
 /* Controles */
