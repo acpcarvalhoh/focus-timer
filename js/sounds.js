@@ -42,13 +42,17 @@ export function Sounds(){
             BgAudio[3].audio.play();
         }
     }
-
+     
+    function Pause(index){
+        BgAudio[index].audio.pause()
+    }
 
     return{
         soudOfFlorest,
         soudOfRain,
         soudOfCoffeshop,
-        soudOfFireplace
+        soudOfFireplace,
+        Pause
     }
 
 

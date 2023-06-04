@@ -1,3 +1,7 @@
+import { Sounds } from "./sounds.js"
+
+const sounds = Sounds()
+
 export function ModeDisplay({
     boby,
     timerDisplay,
@@ -59,7 +63,7 @@ export function ModeDisplay({
         
         cards.forEach((card) => {
             const path = card.querySelector('svg path');
-            const range = card.querySelector('input[type="range');  
+            const range = card.querySelector('input[type="range"]');  
             
             card.addEventListener('click', function () {
               if(buttonDarkMode.classList.contains('hidden')){
@@ -83,16 +87,54 @@ export function ModeDisplay({
                 }else{
                     range.value = '0'
                 }
-                
+
+                const cardSounds = {
+                    rain: card.classList.contains('card-rain'),
+                    florest: card.classList.contains('card-florest'),
+                    coffeeshop: card.classList.contains('card-coffeshop'),
+                    fireplace: card.classList.contains('card-fireplace'),
+                }
+        
+                if(cardSounds.florest){
+                    if(isActivedCard){
+                        sounds.soudOfFlorest()
+                    }else{
+                        sounds.Pause(0)
+                    }
+
+                }else if(cardSounds.rain){
+                    if(isActivedCard){
+                        sounds.soudOfRain()
+                    }else{
+                        sounds.Pause(1)
+                    }
+
+                }else if(cardSounds.coffeeshop){
+                    if(isActivedCard){
+                        sounds.soudOfCoffeshop()
+                    }else{
+                        sounds.Pause(2)
+                    }
+
+                }else{
+                    if(isActivedCard){
+                        sounds.soudOfFireplace()
+                    }else{
+                        sounds.Pause(3)
+                    }
+                }
+
+                range.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    
+                });
+                    
             });
 
-
-            range.addEventListener('click', (event) => {
-                event.stopPropagation();
-    
-            });
-
+            
+        
         });
+
 
     }
 

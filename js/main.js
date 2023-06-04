@@ -1,5 +1,5 @@
 import { ModeDisplay } from "./displaymode.js"
-import { Sounds } from "./sounds.js"
+
 
 
 /* Modo do display */
@@ -18,14 +18,6 @@ const buttonPlay = document.querySelector('.play')
 const buttonStop  = document.querySelector('.stop')
 const plusButton = document.querySelector('.plus-button')
 const minusButton = document.querySelector('.minus-button')
-
-const sounds = Sounds()
-const audioElements = [
-  sounds.soudOfFlorest,
-  sounds.soudOfRain,
-  sounds.soudOfCoffeshop,
-  sounds.soudOfFireplace
-];
 
 const modeDisplay = ModeDisplay({
   boby,
