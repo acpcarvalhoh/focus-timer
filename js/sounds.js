@@ -1,5 +1,9 @@
 export function Sounds(){
 
+    const kitchenTimer = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
+
+    const buttonPressAudio = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true")
+
     const BgAudio = [
         { audio: new Audio("sounds/Floresta.wav"), volume: 1 },
         { audio: new Audio("sounds/Chuva.wav"), volume: 1 },
@@ -52,7 +56,9 @@ export function Sounds(){
         soudOfRain,
         soudOfCoffeshop,
         soudOfFireplace,
-        Pause
+        Pause,
+        kitchenTimer,
+        buttonPressAudio
     }
 
 
