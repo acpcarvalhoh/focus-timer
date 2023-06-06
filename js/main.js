@@ -20,7 +20,7 @@ const minusButton = document.querySelector('.minus-button')
 let minutesDisplay = document.querySelector('.minutes')
 let secondsDisplay = document.querySelector('.seconds')
 let timerTimeOut;
-let setMinutes;
+let minutes
 
 
 const soud = Sounds()
@@ -44,12 +44,22 @@ const timer = Timer({
 modeDisplay.activedCards()
 
 buttonPlay.addEventListener('click', function(){
-  setTimer()
+  timer.countDown()
   soud.buttonPressAudio.play()
 })
 
 buttonStop.addEventListener('click', function(){
   timer.hold()
+})
+
+plusButton.addEventListener('click', function(){
+  minutes =  Number(minutesDisplay.textContent)
+    minutesDisplay.textContent = String(minutes + 5).padStart(2, '0')
+})
+
+minusButton.addEventListener('click', function(){
+    minutes =  Number(minutesDisplay.textContent)
+    minutesDisplay.textContent = String(minutes - 5).padStart(2, '0')
 })
 
 
@@ -69,22 +79,5 @@ function darkAndLightMode() {
   buttonLightMode.classList.toggle('hidden');
 }
 
-
-function setTimer(){
-  setMinutes = prompt('Quantos minutos?')
-    if (setMinutes === null || 
-        setMinutes.match(/[^0-9]/g) || 
-        setMinutes.match(/\bnull\b/)) {
-        setMinutes = '00';
-    }
-    if(setMinutes < 10){
-        setMinutes = setMinutes.toString().padStart(2, '0'); // adicionar um zero antes
-    }
-
-    minutesDisplay.textContent = setMinutes
-
-
-    timer.countDown()
-}
     
 

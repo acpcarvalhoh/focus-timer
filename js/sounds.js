@@ -51,6 +51,8 @@ export function Sounds(){
         BgAudio[index].audio.pause()
     }
 
+    BgAudio.map(audio => audio.loop = true)
+
     return{
         soudOfFlorest,
         soudOfRain,

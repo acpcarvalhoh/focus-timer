@@ -126,6 +126,37 @@ export function ModeDisplay({
 
                 range.addEventListener('click', (event) => {
                     event.stopPropagation();
+
+                    if (cardSounds.florest) {
+                        if (isActivedCard) {
+                          const volume = parseFloat(range.value);
+                          sounds.soudOfFlorest(volume);
+                        } else {
+                          sounds.Pause(0);
+                        }
+                      } else if (cardSounds.rain) {
+                        if (isActivedCard) {
+                          const volume = parseFloat(range.value); 
+                          sounds.soudOfRain(volume);
+                        } else {
+                          sounds.Pause(1);
+                        }
+                      } else if (cardSounds.coffeeshop) {
+                        if (isActivedCard) {
+                          const volume = parseFloat(range.value);
+                          sounds.soudOfCoffeshop(volume);
+                        } else {
+                          sounds.Pause(2);
+                        }
+                      } else {
+                        if (isActivedCard) {
+                          const volume = parseFloat(range.value); 
+                          sounds.soudOfFireplace(volume);
+                        } else {
+                          sounds.Pause(3);
+                        }
+                      }
+                      
                     
                 });
                     
