@@ -54,12 +54,12 @@ buttonStop.addEventListener('click', function(){
 
 plusButton.addEventListener('click', function(){
   minutes =  Number(minutesDisplay.textContent)
-    minutesDisplay.textContent = String(minutes + 5).padStart(2, '0')
+    minutesDisplay.textContent = String(minutes + 1).padStart(2, '0')
 })
 
 minusButton.addEventListener('click', function(){
     minutes =  Number(minutesDisplay.textContent)
-    minutesDisplay.textContent = String(minutes - 5).padStart(2, '0')
+    minutesDisplay.textContent = String(minutes - 1).padStart(2, '0')
 })
 
 

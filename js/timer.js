@@ -25,7 +25,7 @@ export function Timer({
 
             if(minutes <= 0 && seconds <= 0){
                 Reset()
-                Sounds().kitchenTimer.play()
+                sound.timeAnd()
                 return
             }
 

@@ -51,7 +51,18 @@ export function Sounds(){
         BgAudio[index].audio.pause()
     }
 
-    BgAudio.map(audio => audio.loop = true)
+    BgAudio.map(audio => audio.audio.loop = true)
+
+    function timeAnd() {
+        BgAudio.forEach(audio => {
+          audio.audio.pause();
+          audio.audio.currentTime = 0; 
+        });
+
+        kitchenTimer.play();
+    }
+
+    
 
     return{
         soudOfFlorest,
@@ -59,7 +70,7 @@ export function Sounds(){
         soudOfCoffeshop,
         soudOfFireplace,
         Pause,
-        kitchenTimer,
+        timeAnd,
         buttonPressAudio
     }
 
